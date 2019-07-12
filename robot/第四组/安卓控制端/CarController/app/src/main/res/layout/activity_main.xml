@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/textIP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="输入ip: 192.168.137.218"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:background="#bfffffff"/>
+            <Button
+                android:id="@+id/buttonConnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="连接"
+                android:background="@drawable/bt_press_color"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonControl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="按钮控制"
+                android:background="#F5F5F5"/>
+            <Button
+                android:id="@+id/rockerControl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="摇杆控制"
+                android:background="#FFFAFA"/>
+            <Button
+                android:id="@+id/gravityControl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="重力感应"
+                android:background="#F5F5F5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textGravity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="\n\n摇动手机以控制"
+                android:visibility="invisible"
+                android:layout_gravity="center_horizontal"/>
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCommand"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="  input command"
+                android:inputType="textUri"
+                android:singleLine="true"
+                android:textColor = "#00FFFF"
+                android:background="#EEEEE0"
+                android:textStyle="italic"/>
+            <Button
+                android:id="@+id/buttonExecute"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="send"
+                android:background="@drawable/bt_press_color"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

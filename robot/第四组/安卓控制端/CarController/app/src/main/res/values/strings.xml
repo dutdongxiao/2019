@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CarControl</string>
+    <drawable name="unpressed">#DBDBDB</drawable>
+    <drawable name="pressed">#7F7F7F</drawable>
+</resources>
