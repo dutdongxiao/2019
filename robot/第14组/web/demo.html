@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Controller</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <style type="text/css">
+        #front {
+            margin-left: 60px;
+			margin-top: 65px;
+        }
+        #rear{
+			margin-left: 20px;
+			margin-top: 65px;
+        }
+		#rightFront{
+            margin-left: 110px;
+			margin-top: 50px;
+        }
+		#leftFront{
+			margin-left: 110px;
+			margin-top: 12px;
+		}
+		#add{
+			margin-left: 215px;
+			margin-top: -90px;
+		}
+		#minus{
+			margin-left: 215px;
+			margin-top: -270px;
+		}
+		#pause{
+			margin-top: -450px;
+			margin-left: 215px;
+		}
+        .btn{
+             background: #FFB90F;
+            }
+    </style>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $.post("/cmd",this.id,function(data,status){});
+            });
+        });
+ 
+    </script>
+</head>
+<body>
+<div id="container" class="container">
+    
+    <div>
+        <button id="front" class="btn btn-lg btn-primary glyphicon glyphicon-hand-left" style="font-size: 55px"></button>
+		<button id='rear' class="btn btn-lg btn-primary glyphicon glyphicon-hand-right"style="font-size: 55px"></button>
+	</div>
+    <div>
+        <button id='rightFront' class="btn btn-lg btn-primary glyphicon glyphicon-hand-up"style="font-size: 55px"></button>
+    </div>
+	<div>
+        <button id='leftFront' class="btn btn-lg btn-primary glyphicon glyphicon-hand-down"style="font-size: 55px"></button>
+    </div>
+       
+	<div>
+        <button id='add' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-left"></button>
+    </div>
+	<div>
+        <button id='minus' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-right"></button>
+    </div>
+	<div>
+        <button id='pause' class="btn btn-lg btn-primary glyphicon glyphicon-remove"></button>
+    </div>
+</div>
+ 
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
