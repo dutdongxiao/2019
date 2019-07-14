@@ -1,5 +1,5 @@
 voice_overrall.py是串联所有功能的主函数
 voice_composer.py是我封装的所有有关语音的函数库
 baiduface.py是我封装的所有有关图像的函数库
-demo.py是调用了语音唤醒功能后的主函数，通过demo来调用voice——overrall.py
+demo.py是调用了语音唤醒功能后的主函数，通过demo来调用voice_overrall.py
 调用方法为python demo.py resources/zf.pmdl
