@@ -1,9 +1,9 @@
 ##&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;智能小车
 ---
-&emsp;**<font size = 4,Bold>本项目分为三部分：</font>**
-&emsp;1.小车硬件部分
-&emsp;2.ssd及部分语音插件部分(手势识别)
-&emsp;3.APP部分
+&emsp;**<font size = 4,Bold>本项目分为三部分：</font>**  
+&emsp;1.小车硬件部分  
+&emsp;2.ssd及部分语音插件部分(手势识别)  
+&emsp;3.APP部分  
 
 ---
 &emsp;小车硬件部分文件夹即为keil5的工程文件夹，可以在直接使用Keil5打开位于USER文件夹下的工程文件。
