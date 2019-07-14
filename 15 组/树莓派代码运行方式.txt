@@ -1,2 +1,0 @@
-voice_overrall,py包含所有语音控制功能的主函数，baiduface.py包含所有有关图像的代码，
-demo.py是调用了语音唤醒功能后的主函数，调用方法为python demo.py resources/zf.pmdl
