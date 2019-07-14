@@ -1,12 +1,12 @@
  /*-------------------------------------------------------------------------------
-ÎÄ¼şÃû³Æ£ºmain.c
-ÎÄ¼şÃèÊö£º°´¼ü¿ØÖÆLEDÉÁË¸£¬S1È¡·´LED2£¬S2È¡·´LED3£¬S3Í¬Ê±È¡·´LED2£¬LED3
-          S4Ê¹LED2£¬LED3ÉÁË¸5´Î
-Ó²¼şÆ½Ì¨£ºÄáÄªM3S¿ª·¢°å
-±àĞ´ÕûÀí£ºshifang
-¹Ì¼ş¿â  £ºV3.5
-¼¼ÊõÂÛÌ³£ºwww.doflye.net
-±¸    ×¢£ºÍ¨¹ı¼òµ¥ĞŞ¸Ä¿ÉÒÔÒÆÖ²µ½ÆäËû¿ª·¢°å£¬²¿·Ö×ÊÁÏÀ´Ô´ÓÚÍøÂç¡£
+æ–‡ä»¶åç§°ï¼šmain.c
+æ–‡ä»¶æè¿°ï¼šæŒ‰é”®æ§åˆ¶LEDé—ªçƒï¼ŒS1å–åLED2ï¼ŒS2å–åLED3ï¼ŒS3åŒæ—¶å–åLED2ï¼ŒLED3
+          S4ä½¿LED2ï¼ŒLED3é—ªçƒ5æ¬¡
+ç¡¬ä»¶å¹³å°ï¼šå°¼è«M3Så¼€å‘æ¿
+ç¼–å†™æ•´ç†ï¼šshifang
+å›ºä»¶åº“  ï¼šV3.5
+æŠ€æœ¯è®ºå›ï¼šwww.doflye.net
+å¤‡    æ³¨ï¼šé€šè¿‡ç®€å•ä¿®æ”¹å¯ä»¥ç§»æ¤åˆ°å…¶ä»–å¼€å‘æ¿ï¼Œéƒ¨åˆ†èµ„æ–™æ¥æºäºç½‘ç»œã€‚
 ---------------------------------------------------------------------------------*/
 #include "stm32f10x.h"
 #include "led.h"
@@ -18,11 +18,11 @@
 int main(void)
 {
 	
-  u8 a,b,c,d,e,f,g,h,i,j;//¶¨Òå±äÁ¿ 
+  u8 a,b,c,d,e,f,g,h,i,j;//å®šä¹‰å˜é‡ 
 	int x,y;
-  LED_Init();//LED³õÊ¼»¯
+  LED_Init();//LEDåˆå§‹åŒ–
 	GPI_Init();
-  SysTick_Init();//ÑÓÊ±³õÊ¼»¯
+  SysTick_Init();//å»¶æ—¶åˆå§‹åŒ–
 	TIM_SetCompare1(TIM3,200);
 	//TIM3_PWM_Init(500,83);
 	TIM2_PWM_Init();
@@ -35,7 +35,7 @@ int main(void)
 while (1)
   {
 		
-		  if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_1)==1)    //  ÓÒ
+		  if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_1)==1)    //  å³
 		{
 			if(x>50)
 			{
@@ -43,7 +43,7 @@ while (1)
 			TIM_SetCompare1(TIM2,x);
 			}
 		}
-if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_2)==1)  //   ×ó
+if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_2)==1)  //   å·¦
 		{
 			if(x<120)
 			{
@@ -51,7 +51,7 @@ if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_2)==1)  //   ×ó
 			TIM_SetCompare1(TIM2,x);
 			}
 		}
-if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3)==1)  //   ÉÏ
+if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3)==1)  //   ä¸Š
 		{
 			if(y<85)
 			{
@@ -59,7 +59,7 @@ if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3)==1)  //   ÉÏ
 			TIM_SetCompare1(TIM4,y);
 			}
 		}
-if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4)==1)  //  ÏÂ 
+if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4)==1)  //  ä¸‹ 
 		{
 			if(y>60)
 			{
@@ -233,4 +233,4 @@ if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_4)==1)  //  ÏÂ
   }
 }
 
-/*----------------------µÂ·ÉÀ³ ¼¼ÊõÂÛÌ³£ºwww.doflye.net--------------------------*/
+/*----------------------å¾·é£è± æŠ€æœ¯è®ºå›ï¼šwww.doflye.net--------------------------*/
